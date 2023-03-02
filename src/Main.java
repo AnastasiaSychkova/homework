@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        finish("oooooooooooo", "jfjkjkgR55", "jfjkjkgR");
-        finish("oooooooooooo", "bggbg655", "bggbg655");
+        finish("oooooooooooo", "jfjkj=gR55", "jfjkjkgR");
+        finish("oooooooooooo", "bggbg=655", "bggbg=655");
     }
 
     public static boolean finish(String login, String password, String repeatPassword) {
@@ -19,7 +19,7 @@ public class Main {
         if (isValidLength(login) && hasOnlyValidSymbols(login)) {
             System.out.println("Верный логин");
         } else {
-            throw new WrongLoginException("Неправильный логин");
+            throw new WrongLoginException();
         }
     }
 
@@ -27,7 +27,7 @@ public class Main {
         if (hasOnlyValidSymbols(password) && equalsPassword(password, repeatPassword) && isValidLength(password)) {
             System.out.println("Верный пароль");
         } else {
-            throw new WrongPasswordException("Неправильный пароль");
+            throw new WrongPasswordException();
         }
     }
 

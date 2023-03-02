@@ -1,5 +1,5 @@
 public class WrongLoginException extends RuntimeException {
-    public WrongLoginException(String massage) {
-        super(massage);
+    public WrongLoginException() {
+        super("Неправильный логин");
     }
 }
